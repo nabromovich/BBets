@@ -66,7 +66,7 @@ The data shows that the 95% confidence interval is `r low` to `r high`
 Data1<-array(dim=1000)
 Data1<-as.numeric(Data1)
 for(i in 1:1000){
-  Data1[i] = BrLw(35,4.4,637)
+  Data1[i] = BrLw(35,4.2,637)
 }
 hist(Data1)
 sData1<-sort(Data1)
@@ -74,7 +74,7 @@ low<-sData1[25]
 high<-sData1[975]
 
 ```
-Per the data above the fair odds would be 4.4
+Per the data above the fair odds would be 4.2
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
