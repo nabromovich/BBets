@@ -69,18 +69,24 @@ The data shows that the 95% confidence interval is `r low` to `r high` when hiri
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
 ```{r}
-Data1<-array(dim=1000)
-Data1<-as.numeric(Data1)
-for(i in 1:1000){
-  Data1[i] = BrLw2()
+Data2<-array(dim=200)
+Data2<-as.numeric(Data2)
+for(i in 1:200){
+  Data2[i] = BrLw2(odds = 4.39)
+
 }
-hist(Data1)
-sData1<-sort(Data1)
-low<-sData1[25]
-high<-sData1[975]
+
+sData2<-sort(Data2)
+hist(sData2)
+abline(v=sData2[10],col="red")
+abline(v=sData2[190],col="blue")
+low<-sData2[10]
+high<-sData2[190]
 
 ```
-Per the data above the fair odds would be 4.2
+
+
+Per the data above the fair odds would be 4.39.  This is seen by the 0 being in the center of the histogram. 
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
