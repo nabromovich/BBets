@@ -1,7 +1,7 @@
-BrLw <-function(numClass,odds,countoDo){
+BrLw <-function(numClass,odds,countoDo=637){
   
   days=1:365
-  countoDo = set.default(637)
+  countoDo = 
   count=countoDo
   repeatn=numClass
   varstor=numeric()

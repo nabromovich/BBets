@@ -1,6 +1,6 @@
 ---
 title: "Brownlows Bets"
-author: "Nathan AbromovichBrLw(35,2,"
+author: "Nathan Abromovich
 output: 
   html_document:
     number_sections: true
