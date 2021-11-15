@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 require(tidyverse)
 require(tigerstats)
 require(knitr)
-source(file="BrLw.R")
+source(file="BrLw2.R")
 ```
 
 
@@ -36,24 +36,30 @@ There are 3 questions and there should be at least 3 separate commits, at least 
 
 The function will be given a class_size by number of students, odds, and Number_of_times brownlow made the bet.  It will give you back how much Brownlows earnings were. We will use it to answer our three questions below. If you can, improve this function by giving default values to some of its inputs. 
 
-# In the class and payoff as described  If you highered 40 brownlow substitute teachers to do the same thing that Brownlow did then.
+# In the class and payoff as described  If you highered 1000 brownlow substitute teachers to do the same thing that Brownlow did then.
 ## what is their average earnings
 ## the standard deviation and a 95% confidence interval for their earnings?
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
+
+The code block below explains that the array has 1000 elements inside of it.  Each representing a single bet and its earnings.  When run 1000 times it gives us the average earnings giving 2:1 odds. To get the 95% confidence interval, we had to sort the data from low to high to determine who made the most money
+
+
 ```{r}
 Data1<-array(dim=1000)
 Data1<-as.numeric(Data1)
 for(i in 1:1000){
-  Data1[i] = BrLw(35,2,637)
+  Data1[i] = BrLw2()
 }
 hist(Data1)
 sData1<-sort(Data1)
+abline(v=sData1[25],col="red")
+abline(v=sData1[975],col="blue")
 low<-sData1[25]
 high<-sData1[975]
 
 ```
-The data shows that the 95% confidence interval is `r low` to `r high`  
+The data shows that the 95% confidence interval is `r low` to `r high` when hiring 1000 Brownlow subs.  
 
 
 
@@ -66,7 +72,7 @@ The data shows that the 95% confidence interval is `r low` to `r high`
 Data1<-array(dim=1000)
 Data1<-as.numeric(Data1)
 for(i in 1:1000){
-  Data1[i] = BrLw(35,4.2,637)
+  Data1[i] = BrLw2()
 }
 hist(Data1)
 sData1<-sort(Data1)
