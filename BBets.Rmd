@@ -89,7 +89,22 @@ Per the data above the fair odds would be 4.39.  This is seen by the 0 being in 
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
+```{r}
+Data3<-array(dim=200)
+Data3<-as.numeric(Data3)
+for(i in 1:200){
+  Data3[i] = BrLw2(numClass = 29)
 
+}
+
+sData3<-sort(Data3)
+hist(sData3)
+abline(v=sData3[5],col="red")
+abline(v=sData3[195],col="blue")
+low<-sData3[5]
+high<-sData3[195]
+
+```
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
