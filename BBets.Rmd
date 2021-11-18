@@ -105,10 +105,12 @@ low<-sData3[5]
 high<-sData3[195]
 
 ```
-
+  
+This data shows that a class size of 29 students making the bet with 2:1 odd would be the most fair. When using 28 student class size the numbers where close to the same fairness.  We used random class sizes to narrow down what class size would be give the fairest odds. 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
-
+  
+  
 
 
 
