@@ -77,10 +77,10 @@ for(i in 1:200){
 
 sData2<-sort(Data2)
 hist(sData2)
-abline(v=sData2[10],col="red")
-abline(v=sData2[190],col="blue")
-low<-sData2[10]
-high<-sData2[190]
+abline(v=sData2[5],col="red")
+abline(v=sData2[195],col="blue")
+low<-sData2[5]
+high<-sData2[195]
 
 ```
 
