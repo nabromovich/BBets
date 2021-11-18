@@ -123,4 +123,5 @@ The red and blue lines show the 95% confidence interval of his earnings.
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
+  
 
